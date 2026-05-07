@@ -5,7 +5,7 @@ async function loadTasks() {
   const res = await fetch('/api/tasks');
   const data = await res.json();
 
-  taskList.innerHTML = data.map(task => `
+  taskList.innerHTML = data.map(task => ` 
     <li>
       ${task.text}
       <button onclick="deleteTask(${task.id})">Delete</button>
